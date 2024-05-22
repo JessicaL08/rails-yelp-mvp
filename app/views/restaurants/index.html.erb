@@ -1,0 +1,25 @@
+<nav class="navbar sticky-top bg-body-tertiary" style="background-color: black">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Sticky top</a>
+    <%= link_to "!!!  Add new  restaurant  !!!", new_restaurant_path %>
+  </div>
+</nav>
+
+
+<h1>/!\ Restaurants /!\</h1>
+<div class="container">
+  <ul class="resto-list">
+    <% @restaurants.each do |restaurant| %>
+      <li class="card">
+      <div class="item">
+      <img src="https://42info.fr/wp-content/uploads/2023/11/Restaurant-Saint-Etienne-42info.jpeg" style="">
+      <%= link_to restaurant.name, restaurant_path(restaurant) %>
+      <%= link_to restaurant.address, restaurant_path(restaurant) %>
+      <%= link_to restaurant.phone_number, restaurant_path(restaurant) %>
+    <% end %>
+      </div>
+      </li>
+    <br>
+  </ul>
+  <%= link_to "!!!  Add new  restaurant  !!!", new_restaurant_path %>
+</div>
